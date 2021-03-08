@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Provider } from "react-redux";
+import store from "./store";
+import ReactGA from "react-ga";
+import Routes from "./Routes";
 
-function App() {
+import "./assets/scss/index.scss";
+
+const App = () => {
+  const initGA = () => {
+    ReactGA.initialize("G-F1J0DYDF27");
+  };
+
+  useEffect(() => {
+    initGA();
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <Provider store={store}>
+    <Routes />
+    // </Provider>
   );
-}
-
+};
 export default App;
