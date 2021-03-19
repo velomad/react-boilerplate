@@ -6,6 +6,7 @@ import { PublicLayout, SecondaryPublicLayout } from "./layouts";
 // const LandingPage = lazy(() => import("./pages/LandingPage"));
 
 import Home from "./pages/Home";
+import Product from "./pages/Product";
 
 import {
   BrowserView,
@@ -22,6 +23,12 @@ const Routes = () => {
           path="/"
           layout={PublicLayout}
           component={Home}
+        />
+        <WithLayoutRoute
+          exact
+          path="/product/:slug"
+          layout={PublicLayout}
+          component={Product}
         />
         <Route path="*" component={() => "404 NOT FOUND"} />
       </Switch>

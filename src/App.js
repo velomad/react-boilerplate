@@ -17,9 +17,9 @@ const App = () => {
   }, []);
 
   return (
-    // <Provider store={store}>
-    <Routes />
-    // </Provider>
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   );
 };
 export default App;
