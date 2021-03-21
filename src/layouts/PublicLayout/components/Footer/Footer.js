@@ -2,27 +2,23 @@ import React from "react";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { Divider } from "@material-ui/core";
+import { COLORS } from "../../../../theme/mainTheme";
+import { Text } from "../../../../components";
 
 const Footer = () => {
   return (
     <React.Fragment>
-      <footer class="bg-blue-900 text-gray-600 body-font">
+      <footer
+        class="text-gray-600 body-font"
+        style={{ backgroundColor: COLORS.secondary }}
+      >
         <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
-              <span class="ml-3 text-xl text-white">Tailblocks</span>
+              <img src="/static/images/logo.png" width="100px" />
+              <Text variant="white" classes="font-bold" size="md">
+                <span style={{ color: COLORS.thirdary }}>Coupon</span>Soupon
+              </Text>
             </a>
             <p class="mt-2 text-sm text-gray-500">
               Air plant banjo lyft occupy retro adaptogen indego
@@ -84,22 +80,18 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="bg-gray-100">
+        <div style={{ backgroundColor: COLORS.thirdary }}>
           <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-            <p class="text-gray-500 text-sm text-center sm:text-left">
+            <p
+              class="text-sm text-center sm:text-left"
+              style={{ color: COLORS.secondary }}
+            >
               © 2020 Tailblocks —
-              <a
-                href="https://twitter.com/knyttneve"
-                rel="noopener noreferrer"
-                class="text-gray-600 ml-1"
-                target="_blank"
-              >
-                @knyttneve
-              </a>
             </p>
             <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
               <a class="text-gray-500">
                 <svg
+                  style={{ color: COLORS.secondary }}
                   fill="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -112,6 +104,7 @@ const Footer = () => {
               </a>
               <a class="ml-3 text-gray-500">
                 <svg
+                  style={{ color: COLORS.secondary }}
                   fill="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -124,6 +117,7 @@ const Footer = () => {
               </a>
               <a class="ml-3 text-gray-500">
                 <svg
+                  style={{ color: COLORS.secondary }}
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
@@ -138,6 +132,7 @@ const Footer = () => {
               </a>
               <a class="ml-3 text-gray-500">
                 <svg
+                  style={{ color: COLORS.secondary }}
                   fill="currentColor"
                   stroke="currentColor"
                   stroke-linecap="round"

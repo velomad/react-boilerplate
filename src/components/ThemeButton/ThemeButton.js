@@ -1,4 +1,5 @@
 import React from "react";
+import { COLORS } from "../../theme/mainTheme";
 
 const ThemeButton = ({ children }) => {
   return (
@@ -6,9 +7,9 @@ const ThemeButton = ({ children }) => {
       <div
         className="w-full text-center font-bold capitalize"
         style={{
-          border: "1px solid #f07431",
+          border: `1px solid ${COLORS.primary}`,
           backgroundColor: "#fff4ee",
-          color: "#f07431",
+          color: COLORS.secondary,
         }}
       >
         {children}

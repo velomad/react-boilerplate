@@ -2,6 +2,8 @@ import { useEffect, useState, useRef, useMemo } from "react";
 import React from "react";
 import { COLORS } from "../../../../theme/mainTheme";
 import { Circles, Drawer } from "./components";
+import { Text } from "../../../../components";
+import { history } from "../../../../utils";
 
 const Navbar = () => {
   const [drawer, setDrawer] = useState(false);
@@ -18,9 +20,9 @@ const Navbar = () => {
     <React.Fragment>
       <Drawer isOpen={drawer} close={drawerClose} />
       <header style={{ backgroundColor: COLORS.primary }}>
-        <div className="flex justify-between px-32 items-center py-4 md:py-2">
-          <div className="flex relative items-center">
-            <svg
+        <div className="flex justify-center md:justify-between md:px-32 items-center ">
+          <div className="relative items-center">
+            {/* <svg
               onClick={handleDrawer}
               className="h-8 w-8 absolute -left-24 text-white cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"
@@ -34,9 +36,21 @@ const Navbar = () => {
                 strokeWidth={2}
                 d="M4 6h16M4 12h16M4 18h16"
               />
-            </svg>
-            <div>
-              <img src="https://asset20.ckassets.com/wp/wp-content/uploads/sites/37/2020/04/5e8dbdd7383b9.png" />
+            </svg> */}
+            <div
+              onClick={() => history.push("/")}
+              className="cursor-pointer flex items-center justify-center"
+            >
+              <img
+                src="/static/images/logo.png"
+                width="100px"
+                className="mt-2"
+              />
+              <div>
+                <Text variant="white" classes="font-bold" size="md">
+                  <span style={{ color: COLORS.secondary }}>Coupon</span>Soupon
+                </Text>
+              </div>
             </div>
           </div>
           <div className="hidden md:block">

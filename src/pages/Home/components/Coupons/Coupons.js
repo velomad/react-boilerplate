@@ -39,18 +39,14 @@ const Coupons = () => {
 
   return (
     <React.Fragment>
-      <div className="px-6 mt-6">
-        <Text 
-        weight="600"
-        isTitle={true}
-        classes="uppercase"
-        >
-          best of myntra
-        </Text>
-      </div>
       <div className="px-2 shadow-lg py-2 space-y-4">
-        {[...Array(1)].map((el, index) => (
+        {[...Array(4)].map((el, index) => (
           <React.Fragment>
+            <div className="px-6 mt-6">
+              <Text weight="600" isTitle={true} classes="uppercase">
+                best of myntra
+              </Text>
+            </div>
             <Accordion expanded={expanded === index} elevation={0}>
               <AccordionSummary>
                 <ProductCard handleProduct={handleProductClick} />
