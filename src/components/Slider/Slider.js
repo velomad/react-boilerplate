@@ -13,12 +13,13 @@ const Slider = (props) => {
   return (
     <div>
       <Swiper
+        style={{ width: props.width }}
         spaceBetween={20}
         slidesPerView={1}
         loop={props.loop}
         pagination={props.pagination}
         autoplay={{
-          delay: 4000,
+          delay: props.delay,
           disableOnInteraction: false,
         }}
         breakpoints={{
@@ -27,13 +28,13 @@ const Slider = (props) => {
             spaceBetween: 10,
           },
           "@2.00": {
-            slidesPerView: 3,
+            slidesPerView: props.spv2,
             spaceBetween: 10,
           },
         }}
       >
-        {props.images.map((el, index) => (
-          <SwiperSlide key={index} className="py-4">
+        {props.images && props.images.map((el, index) => (
+          <SwiperSlide key={index}>
             <div>
               <img key={index} src={el} />
             </div>

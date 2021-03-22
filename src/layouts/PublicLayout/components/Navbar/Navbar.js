@@ -3,7 +3,7 @@ import React from "react";
 import { COLORS } from "../../../../theme/mainTheme";
 import { Circles, Drawer } from "./components";
 import { Text } from "../../../../components";
-import { history } from "../../../../utils";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [drawer, setDrawer] = useState(false);
@@ -37,21 +37,21 @@ const Navbar = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg> */}
-            <div
-              onClick={() => history.push("/")}
-              className="cursor-pointer flex items-center justify-center"
-            >
-              <img
-                src="/static/images/logo.png"
-                width="100px"
-                className="mt-2"
-              />
-              <div>
-                <Text variant="white" classes="font-bold" size="md">
-                  <span style={{ color: COLORS.secondary }}>Coupon</span>Soupon
-                </Text>
+            <Link to="/">
+              <div className="cursor-pointer flex items-center justify-center">
+                <img
+                  src="/static/images/logo.png"
+                  width="100px"
+                  className="mt-2"
+                />
+                <div>
+                  <Text variant="white" classes="font-bold" size="md">
+                    <span style={{ color: COLORS.secondary }}>Coupon</span>
+                    Soupon
+                  </Text>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="hidden md:block">
             <Circles />

@@ -4,7 +4,7 @@ import { history } from "../../utils";
 function PublicLayout(props) {
   const { children, withFooter = true } = props;
   return (
-    <div>
+    <div className="relative">
       <div>
         <Navbar />
       </div>

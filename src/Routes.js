@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { WithLayoutRoute } from "./routers";
 import { PublicLayout, SecondaryPublicLayout } from "./layouts";
 
@@ -7,6 +7,7 @@ import { PublicLayout, SecondaryPublicLayout } from "./layouts";
 
 import Home from "./pages/Home";
 import Product from "./pages/Product";
+import Products from "./pages/Products";
 
 import {
   BrowserView,
@@ -26,7 +27,13 @@ const Routes = () => {
         />
         <WithLayoutRoute
           exact
-          path="/product/:slug"
+          path="/products"
+          layout={PublicLayout}
+          component={Products}
+        />
+        <WithLayoutRoute
+          exact
+          path="/product/:productId"
           layout={PublicLayout}
           component={Product}
         />

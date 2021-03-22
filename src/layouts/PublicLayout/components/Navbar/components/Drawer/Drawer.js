@@ -6,7 +6,7 @@ const Drawer = (props) => {
     return (
       <div style={{ width: "18rem" }}>
         {[...Array(5)].map((el, index) => (
-          <div>{index}</div>
+          <div key={index}>{index}</div>
         ))}
       </div>
     );

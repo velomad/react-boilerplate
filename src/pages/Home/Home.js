@@ -18,13 +18,19 @@ const Home = () => {
   ];
 
   return (
-    <div>
-      <Slider pagination={true} loop={true} images={brandCircles} />
+    <div className="mt-2">
+      <Slider
+        pagination={true}
+        loop={true}
+        delay={4000}
+        width="100%"
+        spv2={3}
+        images={brandCircles}
+      />
 
       <div>
         <Coupons />
       </div>
-
     </div>
   );
 };
