@@ -66,7 +66,7 @@ const ProductCard = (props) => {
                       <del>
                         <Text size="sm" weight="700" variant="primary">
                           &#x20B9;{" "}
-                          {el.productPrice.slice(1, el.productPrice.length)}
+                          {el.priceStrike.slice(1, el.priceStrike.length)}
                         </Text>
                       </del>
                     </div>

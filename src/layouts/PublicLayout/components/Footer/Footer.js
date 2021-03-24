@@ -20,9 +20,9 @@ const Footer = () => {
                 <span style={{ color: COLORS.thirdary }}>Coupon</span>Soupon
               </Text>
             </a>
-            <p className="mt-2 text-sm text-gray-500">
+            {/* <p className="mt-2 text-sm text-gray-500">
               Air plant banjo lyft occupy retro adaptogen indego
-            </p>
+            </p> */}
           </div>
           <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
             <div className="lg:w-1/3 md:w-1/2 w-full px-4">
@@ -59,22 +59,21 @@ const Footer = () => {
             </div>
             <div className="lg:w-1/3 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
-                TRENDS
+                Useful Reads
               </h2>
               <nav className="list-none mb-10 space-y-2 md:mt-6">
                 <li>
+                  <a className="text-gray-300 hover:text-white">About Us</a>
+                </li>
+                <li>
                   <a className="text-gray-300 hover:text-white hover:transform translate-x-1">
-                    MamaEarth
+                    Terms And Conditions
                   </a>
                 </li>
                 <li>
-                  <a className="text-gray-300 hover:text-white">Myntra</a>
-                </li>
-                <li>
-                  <a className="text-gray-300 hover:text-white">Beardo</a>
-                </li>
-                <li>
-                  <a className="text-gray-300 hover:text-white">Ajio</a>
+                  <a className="text-gray-300 hover:text-white">
+                    Privacy Policy
+                  </a>
                 </li>
               </nav>
             </div>
@@ -86,7 +85,7 @@ const Footer = () => {
               className="text-sm text-center sm:text-left"
               style={{ color: COLORS.secondary }}
             >
-              © 2020 Tailblocks —
+              © 2021 CouponSoupon —
             </p>
             <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
               <a className="text-gray-500">

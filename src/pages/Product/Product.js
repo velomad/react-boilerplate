@@ -17,13 +17,15 @@ const Product = () => {
 
   const getProductInfo = async () => {
     try {
-      const result = await axios.get(
-        "http://localhost:5000/api/v1/product/" + params.productId
-      );
+      const result = await axios.get("/api/v1/product/" + params.productId);
       setProduct(result.data);
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const buyNowClick = (earnLink) => {
+    window.open(earnLink, "_blank");
   };
 
   return (
@@ -108,7 +110,7 @@ const Product = () => {
               </div>
             )}
           </div>
-          <ThemeButton>
+          <ThemeButton handleClick={()=> buyNowClick(product.productLink)}>
             <Text size="md" weight="600">
               buy now
             </Text>

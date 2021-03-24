@@ -15,7 +15,7 @@ const Products = () => {
   const getCoupons = async () => {
     try {
       const result = await axios.get(
-        "http://localhost:5000/api/v1/products?company=" + queryparams.company
+        "/api/v1/products?company=" + queryparams.company
       );
       setCouponsData(result.data);
     } catch (error) {
