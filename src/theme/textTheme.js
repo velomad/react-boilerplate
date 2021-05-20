@@ -1,14 +1,17 @@
 // theme.js (you can call it whatever you want)
 
+import { COLORS } from "./mainTheme";
+
 export const textVariant = {
-  primary: `text-gray-600`,
-  secondary: `text-gray-800`,
-  contrast: `text-gray-300`,
+  gray200: `text-gray-500`,
+  gray: `text-gray-700`,
+  gray100: `text-gray-300`,
   white: `text-gray-100`,
   black: `text-black`,
-  info: `text-indigo-500`,
+  primary: `${COLORS.primary}`,
+  infoDark: `text-indigo-700`,
   danger: `text-red-600`,
-  warning: `text-orange-600`,
+  blue: `text-blue-700`,
 };
 
 export const textSize = {
@@ -28,5 +31,6 @@ export const textWeight = {
   400: "font-normal",
   500: "font-medium",
   600: "font-semibold",
-  700: "font-extrabold",
+  700: "font-bold",
+  800: "font-extrabold",
 };
